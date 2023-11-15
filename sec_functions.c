@@ -1,7 +1,8 @@
 #include "monty.h"
 
 /**
- * add_node - Adds a new node with the given value at the beginning of a stack_t list
+ * add_node - Adds a new node with the given value
+ * at the beginning of a stack_t list
  * @top: Pointer to the top of the stack
  * @value: Value to be added to the new node
  * Return: Pointer to the newly added node, or NULL on failure
@@ -29,7 +30,7 @@ stack_t *add_node(stack_t **top, const int value)
 		new_node->next = NULL;
 
 	*top = new_node;
-	return new_node;
+	return (new_node);
 }
 
 /**

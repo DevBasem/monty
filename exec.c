@@ -15,7 +15,8 @@ void fexec(stack_t **stack)
 	ssize_t bytesRead;
 	unsigned int lineNumber = 0;
 
-	while ((bytesRead = getline(&prog_state.line, &lineLength, prog_state.file)) != -1)
+	while ((bytesRead = getline(&prog_state.line, &lineLength,
+					prog_state.file)) != -1)
 	{
 		lineNumber++;
 		currentOpcode = strtok(prog_state.line, " \t\r\n\a");

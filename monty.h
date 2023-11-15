@@ -45,7 +45,8 @@ typedef struct instruction_s
  * @line: Contents of the current input line
  * @file: Pointer to Monty script file
  *
- * Description: Encapsulates essential state variables for Monty program execution.
+ * Description: Encapsulates essential state variables
+ * for Monty program execution.
  */
 typedef struct ProgState_s
 {
