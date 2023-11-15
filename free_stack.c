@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * free_stack - Free the memory allocated for the stack
- * @stack: Double pointer to the head of the stack
+ * free_stack - frees the memory allocated for the stack
+ * @stack: pointer to the head of the stack
  */
 void free_stack(stack_t *stack)
 {
