@@ -1,17 +1,17 @@
 #include "monty.h"
 
 /**
- * free_stack - frees the memory allocated for the stack
- * @stack: pointer to the head of the stack
+ * free_stack - frees a stack_t list
+ * @stack: pointer to the top of the stack
  */
 void free_stack(stack_t *stack)
 {
-	stack_t *temp;
+	stack_t *current;
 
 	while (stack != NULL)
 	{
-		temp = stack;
+		current = stack;
 		stack = stack->next;
-		free(temp);
+		free(current);
 	}
 }
