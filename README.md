@@ -7,7 +7,6 @@ Monty is an interpreter for a custom stack-based programming language. It reads 
 - [Features](#features)
 - [Functionality](#functionality)
 - [Usage](#usage)
-- [Getting Started](#getting-started)
 
 ## Introduction
 
