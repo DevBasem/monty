@@ -1,6 +1,6 @@
 #include "monty.h"
 
-glob_t glob;
+ProgState_t prog_state;
 
 /**
  * main - entry point for the monty program
@@ -19,16 +19,16 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	glob.file = fopen(argv[1], "r");
-	if (glob.file == NULL)
+	prog_state.file = fopen(argv[1], "r");
+	if (prog_state.file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
-	execute_file(&stack);
-	fclose(glob.file);
-	free(glob.line);
-	free_stack(stack);
+	fexec(&stack);
+	fclose(prog_state.file);
+	free(prog_state.line);
+	free_list(stack);
 	exit(EXIT_SUCCESS);
 }
